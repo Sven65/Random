@@ -81,5 +81,23 @@ module.exports = {
     guid: function(){
         return this.s4() + this.s4() + '-' + this.s4() + '-' + this.s4() + '-' +
     this.s4() + '-' + this.s4() + this.s4() + this.s4();
+    },
+    caesarShift: function(text, shift) {
+	var result = "";
+		for (var i = 0; i < text.length; i++) {
+		var c = text.charCodeAt(i);
+		if      (c >= 65 && c <=  90) result += String.fromCharCode((c - 65 + shift) % 26 + 65);  // Uppercase
+		else if (c >= 97 && c <= 122) result += String.fromCharCode((c - 97 + shift) % 26 + 97);  // Lowercase
+		else                          result += text.charAt(i);  // Copy
+	}
+	return result;
+    },
+    
+    fib: function(n) {
+      if (n < 2) {
+        return n;
+      } else {
+        return fib(n - 1) + fib(n - 2);
+      }
     }
 };
