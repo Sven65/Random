@@ -30,6 +30,10 @@ makePass(length, options); // Generates a password with length characters. Optio
   s4(); // Returns a random string.
   
   guid(); // Returns a GUID.
+
+  caesarShift(str, shift); // Shifts str by shift characters
+  
+  fib(7) // Returns 13
 ```
 
 ## Examples
@@ -89,4 +93,46 @@ makePass(length, options); // Generates a password with length characters. Optio
 ```javascript
 	var useful = require('useful-module');
     console.log(useful.guid()); // Returns for example 57576f6a-9f63-b44b-d007-35ebb15d115b
+```
+
+#### caesarShift
+
+```javascript
+	var useful = require('useful-module');
+	console.log(useful.caesarShift("Hello, World!", 13)); // Returns Uryyb, Jbeyq!
+```
+
+#### fib
+
+```javascript
+    var useful = require('useful-module');
+    console.log(useful.fib(7)); // Returns 13
+```
+
+####  vig: function(msg, key, decode){
+
+```javascript
+	var useful = require('useful-module');
+	console.log(useful.vig('Hello', 'World')); // BROKEN
+```
+
+#### int_to_roman
+
+```javascript
+	var useful = require('useful-module');
+	console.log(useful.int_to_roman(1999)); // Returns MCMXCIX
+```
+
+#### romanParse
+
+```javascript
+	var useful = require('useful-module');
+	console.log(useful.romanParse('MCMXCIX')); // Returns 1999
+```
+
+#### reverseStr
+
+```javascript
+	var useful = require('useful-module');
+	console.log(useful.reverseStr('Hello, World!')); // Returns !dlroW ,olleH
 ```
