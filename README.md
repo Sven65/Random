@@ -33,7 +33,7 @@ makePass(length, options); // Generates a password with length characters. Optio
 
   caesarShift(str, shift); // Shifts str by shift characters
   
-  fib(7) // Returns 13
+  fib(7); // Returns 13
 ```
 
 ## Examples
